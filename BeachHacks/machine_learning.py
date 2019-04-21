@@ -59,22 +59,22 @@ y_train = LabelBinarizer().fit_transform(y_train)
 
 
 
-# model=tf.keras.models.Sequential()
-# model.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))
-# model.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))
-# model.add(tf.keras.layers.Dense(60, activation=tf.nn.softmax))
-#
-# model.compile(optimizer='adam',
-#               loss='sparse_categorical_crossentropy',
-#               metrics=['accuracy'])
-#
-# model.fit(x_train, y_train, batch_size=32, epochs=480, steps_per_epoch=1)
-#
-#
-# model.summary()
-#
-#
-# model.save('learn_model.h5')
+model=tf.keras.models.Sequential()
+model.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))
+model.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))
+model.add(tf.keras.layers.Dense(60, activation=tf.nn.softmax))
+
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+model.fit(x_train, y_train, batch_size=32, epochs=480, steps_per_epoch=1)
+
+
+model.summary()
+
+
+model.save('learn_model.h5')
 
 
 
